@@ -1,0 +1,83 @@
+@keyframes dash {
+    0% {
+        stroke-opacity: 1;
+      }
+      1% {
+        stroke-opacity: 0;
+      }
+
+    70,75% {
+      stroke-dashoffset: 0;
+    }
+  
+    85% {
+      fill-opacity: 0;    
+   stroke-opacity: 1;
+    }
+    100% {
+      stroke-opacity:.9;
+      fill-opacity: 1;
+      stroke-dashoffset: -238;
+  
+    }
+  }
+  
+  .logosmall {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+  }
+
+  .logosmall * {
+    stroke: #fff;
+    stroke-width: 1;
+    fill-opacity: 0;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 440;
+    animation-duration: 2.5s;
+    animation-timing-function : ease-in;
+    animation-fill-mode : forwards;
+    animation-delay : 0.1s;
+  }
+  .logosmallanim{
+    animation-name : dash;
+  }
+
+.lowerthird{
+    margin-top:290px !important;
+    background: #012169;
+    border-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    clip-path: polygon(20% 15%, 100% 15%, 95% 93%, 3% 76%, 0 4%);
+    animation: polygons 64s alternate infinite;
+  }
+  
+  @keyframes polygons {
+    25% {
+      clip-path: polygon(21% 10%, 98% 14%, 90% 89%, 0 76%, 1% 6%);
+    }
+    50% {
+      clip-path: polygon(21% 4%, 96% 8%, 97% 86%, 3% 76%, 3% 9%);
+    }
+    75% {
+      clip-path: polygon(21% 9%, 95% 14%, 90% 82%, 3% 92%, 1% 15%);
+    }
+  }
+
+  .lowerthird h1,
+  .lowerthird h2,
+  .lowerthird h3,
+  .lowerthird h4,
+  .lowerthird p{
+    color:#eee !important;
+  }
+  .flex-grid{
+    display: flex !important;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  
+  }
+  .flex-col{
+    width:50%;
+  }
